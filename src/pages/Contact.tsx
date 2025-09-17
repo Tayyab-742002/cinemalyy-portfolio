@@ -41,7 +41,7 @@ const Contact = () => {
                       First Name
                     </label>
                     <Input 
-                      className="bg-input border-border text-text-elegant placeholder:text-muted-foreground focus:border-accent focus:ring-accent"
+                      className="bg-input border-border text-text-elegant placeholder:text-muted-foreground  focus:ring-accent"
                       placeholder="John"
                     />
                   </div>
@@ -50,7 +50,7 @@ const Contact = () => {
                       Last Name
                     </label>
                     <Input 
-                      className="bg-input border-border text-text-elegant placeholder:text-muted-foreground focus:border-accent focus:ring-accent"
+                      className="bg-input border-border text-text-elegant placeholder:text-muted-foreground  focus:ring-accent"
                       placeholder="Doe"
                     />
                   </div>
@@ -62,7 +62,7 @@ const Contact = () => {
                   </label>
                   <Input 
                     type="email"
-                    className="bg-input border-border text-text-elegant placeholder:text-muted-foreground focus:border-accent focus:ring-accent"
+                    className="bg-input border-border text-text-elegant placeholder:text-muted-foreground  focus:ring-accent"
                     placeholder="john@example.com"
                   />
                 </div>
@@ -72,7 +72,7 @@ const Contact = () => {
                     Project Type
                   </label>
                   <Input 
-                    className="bg-input border-border text-text-elegant placeholder:text-muted-foreground focus:border-accent focus:ring-accent"
+                    className="bg-input border-border text-text-elegant placeholder:text-muted-foreground  focus:ring-accent"
                     placeholder="Portrait Session, Commercial, Event, etc."
                   />
                 </div>
@@ -83,7 +83,7 @@ const Contact = () => {
                   </label>
                   <Textarea 
                     rows={6}
-                    className="bg-input border-border text-text-elegant placeholder:text-muted-foreground focus:border-accent focus:ring-accent resize-none"
+                    className="bg-input border-border text-text-elegant placeholder:text-muted-foreground  focus:ring-accent resize-none"
                     placeholder="Tell me about your vision, timeline, and any specific requirements..."
                   />
                 </div>

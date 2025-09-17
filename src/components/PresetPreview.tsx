@@ -1,6 +1,6 @@
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { Download, ShoppingCart } from "lucide-react";
+import { ShoppingCart } from "lucide-react";
 
 interface PresetPreviewProps {
   preset: {
@@ -93,13 +93,13 @@ const PresetPreview = ({ preset, isOpen, onClose, onAddToCart }: PresetPreviewPr
                   <ShoppingCart size={18} className="mr-2" />
                   Add to Cart
                 </Button>
-                <Button 
+                {/* <Button 
                   variant="outline" 
                   className="w-full border-border text-text-muted hover:text-text-elegant hover:border-accent"
                 >
                   <Download size={18} className="mr-2" />
                   Download Sample
-                </Button>
+                </Button> */}
               </div>
             </div>
 

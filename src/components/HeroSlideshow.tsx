@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-photographer.jpg";
 import samplePortrait1 from "@/assets/sample-portrait-1.jpg";
 import samplePortrait2 from "@/assets/sample-portrait-2.jpg";
+import { useNavigate } from "react-router-dom";
 
 const slides = [
   {
@@ -24,6 +25,7 @@ const slides = [
 ];
 
 const HeroSlideshow = () => {
+  const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
@@ -73,6 +75,10 @@ const HeroSlideshow = () => {
                   {slide.subtitle}
                 </p>
                 <Button
+                onClick={() => {
+                  
+                  navigate("/portfolio");
+                }}
                   size="lg"
                   className="bg-transparent border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-all duration-300 px-8 py-4 text-lg  uppercase tracking-widest"
                 >

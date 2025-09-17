@@ -180,9 +180,9 @@ const Presets = () => {
                         >
                           <Eye size={20} />
                         </Button>
-                        <Button size="icon" className="bg-text-elegant hover:bg-text-elegant/80 text-background">
+                        {/* <Button size="icon" className="bg-text-elegant hover:bg-text-elegant/80 text-background">
                           <Download size={20} />
-                        </Button>
+                        </Button> */}
                       </div>
                     </div>
                   )}
@@ -215,9 +215,9 @@ const Presets = () => {
                       <ShoppingCart size={18} className="mr-2" />
                       Add to Cart
                     </Button>
-                    <Button variant="outline" size="icon" className="border-border text-text-muted hover:text-text-elegant hover:border-accent">
+                    {/* <Button variant="outline" size="icon" className="border-border text-text-muted hover:text-text-elegant hover:border-accent">
                       <Download size={18} />
-                    </Button>
+                    </Button> */}
                   </div>
                 </div>
               </Card>
