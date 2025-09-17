@@ -66,7 +66,7 @@ const HeroSlideshow = () => {
             {/* Content */}
             <div className="absolute inset-0 flex items-center justify-center text-center">
               <div className="max-w-4xl px-6 animate-fade-in">
-                <h1 className=" text-5xl md:text-7xl font-bold text-text-elegant mb-4 leading-tight">
+                <h1 className=" font-serif text-5xl md:text-7xl font-bold text-text-elegant mb-4 leading-tight">
                   {slide.title}
                 </h1>
                 <p className=" text-xl md:text-2xl text-text-muted mb-8 tracking-wide">

@@ -55,7 +55,7 @@ export default {
         'warm-white': "hsl(var(--warm-white))",
       },
       fontFamily: {
-        'serif': ['Playfair Display', 'serif'],
+        'serif': ['Quicksand', 'serif'],
         'sans': ['Quicksand', 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Arial', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'sans-serif'],
       },
       backgroundImage: {

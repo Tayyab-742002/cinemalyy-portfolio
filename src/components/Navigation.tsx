@@ -32,7 +32,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className=" text-2xl font-bold text-text-elegant hover:text-accent transition-colors duration-300">
-            Elena Voss
+            Cinemalyy
           </Link>
 
           {/* Desktop Navigation */}
@@ -41,7 +41,7 @@ const Navigation = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className={` text-sm uppercase tracking-widest transition-all duration-300 hover:text-accent relative ${
+                className={` text-sm  tracking-widest transition-all duration-300 hover:text-accent relative ${
                   location.pathname === item.path
                     ? "text-accent"
                     : "text-text-muted hover:text-text-elegant"
@@ -75,7 +75,7 @@ const Navigation = () => {
                   key={item.name}
                   to={item.path}
                   onClick={() => setIsOpen(false)}
-                  className={`block text-lg uppercase tracking-widest transition-colors duration-300 ${
+                  className={`block text-lg  tracking-widest transition-colors duration-300 ${
                     location.pathname === item.path
                       ? "text-accent"
                       : "text-text-muted hover:text-text-elegant"
