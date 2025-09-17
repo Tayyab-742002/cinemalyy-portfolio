@@ -2,7 +2,11 @@ import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Download, Eye } from "lucide-react";
+import { Download, Eye, ShoppingCart } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
+import { useCart } from "@/hooks/useCart";
+import Cart from "@/components/Cart";
+import PresetPreview from "@/components/PresetPreview";
 import samplePortrait1 from "@/assets/sample-portrait-1.jpg";
 import samplePortrait2 from "@/assets/sample-portrait-2.jpg";
 
@@ -48,6 +52,9 @@ const presets = [
 const Presets = () => {
   const [hoveredPreset, setHoveredPreset] = useState<number | null>(null);
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const [previewPreset, setPreviewPreset] = useState<typeof presets[0] | null>(null);
+  const cart = useCart();
+  const { toast } = useToast();
 
   const categories = ["All", "Portrait", "Fine Art", "Street"];
 
@@ -55,9 +62,34 @@ const Presets = () => {
     ? presets 
     : presets.filter(preset => preset.category === selectedCategory);
 
+  const handleAddToCart = (preset: typeof presets[0]) => {
+    const priceValue = parseInt(preset.price.replace('$', ''));
+    cart.addToCart({
+      id: preset.id,
+      name: preset.name,
+      price: preset.price,
+      priceValue,
+      image: preset.afterImage,
+      category: preset.category
+    });
+    toast({
+      title: "Added to cart",
+      description: `${preset.name} has been added to your cart.`,
+    });
+  };
+
+  const handlePreview = (preset: typeof presets[0]) => {
+    setPreviewPreset(preset);
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
+      
+      {/* Cart */}
+      <div className="fixed top-24 right-6 z-40">
+        <Cart cart={cart} />
+      </div>
       
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-6 text-center">
@@ -141,7 +173,11 @@ const Presets = () => {
                   {hoveredPreset === preset.id && (
                     <div className="absolute inset-0 bg-gradient-overlay flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <div className="flex gap-4">
-                        <Button size="icon" className="bg-accent hover:bg-accent/80 text-accent-foreground">
+                        <Button 
+                          size="icon" 
+                          className="bg-accent hover:bg-accent/80 text-accent-foreground"
+                          onClick={() => handlePreview(preset)}
+                        >
                           <Eye size={20} />
                         </Button>
                         <Button size="icon" className="bg-text-elegant hover:bg-text-elegant/80 text-background">
@@ -172,8 +208,12 @@ const Presets = () => {
                   </p>
                   
                   <div className="flex gap-3">
-                    <Button className="flex-1 bg-accent hover:bg-accent/80 text-accent-foreground font-sans uppercase tracking-wider">
-                      Purchase
+                    <Button 
+                      className="flex-1 bg-accent hover:bg-accent/80 text-accent-foreground font-sans uppercase tracking-wider"
+                      onClick={() => handleAddToCart(preset)}
+                    >
+                      <ShoppingCart size={18} className="mr-2" />
+                      Add to Cart
                     </Button>
                     <Button variant="outline" size="icon" className="border-border text-text-muted hover:text-text-elegant hover:border-accent">
                       <Download size={18} />
@@ -185,6 +225,19 @@ const Presets = () => {
           </div>
         </div>
       </section>
+
+      {/* Preset Preview Modal */}
+      <PresetPreview 
+        preset={previewPreset}
+        isOpen={!!previewPreset}
+        onClose={() => setPreviewPreset(null)}
+        onAddToCart={() => {
+          if (previewPreset) {
+            handleAddToCart(previewPreset);
+            setPreviewPreset(null);
+          }
+        }}
+      />
     </div>
   );
 };

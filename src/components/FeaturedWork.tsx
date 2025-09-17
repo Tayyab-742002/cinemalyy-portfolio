@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 import samplePortrait1 from "@/assets/sample-portrait-1.jpg";
 import samplePortrait2 from "@/assets/sample-portrait-2.jpg";
 
@@ -68,6 +70,15 @@ const FeaturedWork = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Portfolio Link */}
+        <div className="text-center mt-16">
+          <Link to="/portfolio">
+            <Button className="bg-accent hover:bg-accent/80 text-accent-foreground font-sans uppercase tracking-wider px-8 py-3">
+              View Full Portfolio
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
