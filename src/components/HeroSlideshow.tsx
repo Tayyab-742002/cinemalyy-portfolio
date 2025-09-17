@@ -62,19 +62,19 @@ const HeroSlideshow = () => {
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-overlay"></div>
-            
+
             {/* Content */}
             <div className="absolute inset-0 flex items-center justify-center text-center">
               <div className="max-w-4xl px-6 animate-fade-in">
-                <h1 className="font-serif text-5xl md:text-7xl font-bold text-text-elegant mb-4 leading-tight">
+                <h1 className=" text-5xl md:text-7xl font-bold text-text-elegant mb-4 leading-tight">
                   {slide.title}
                 </h1>
-                <p className="font-sans text-xl md:text-2xl text-text-muted mb-8 tracking-wide">
+                <p className=" text-xl md:text-2xl text-text-muted mb-8 tracking-wide">
                   {slide.subtitle}
                 </p>
-                <Button 
-                  size="lg" 
-                  className="bg-transparent border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-all duration-300 px-8 py-4 text-lg font-sans uppercase tracking-widest"
+                <Button
+                  size="lg"
+                  className="bg-transparent border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-all duration-300 px-8 py-4 text-lg  uppercase tracking-widest"
                 >
                   View Portfolio
                 </Button>
@@ -93,7 +93,7 @@ const HeroSlideshow = () => {
       >
         <ChevronLeft size={24} />
       </Button>
-      
+
       <Button
         variant="ghost"
         size="icon"
@@ -110,8 +110,8 @@ const HeroSlideshow = () => {
             key={index}
             onClick={() => goToSlide(index)}
             className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === currentSlide 
-                ? "bg-accent shadow-glow" 
+              index === currentSlide
+                ? "bg-accent shadow-glow"
                 : "bg-text-muted hover:bg-text-elegant"
             }`}
           />

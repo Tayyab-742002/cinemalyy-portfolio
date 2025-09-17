@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Emblema+One&family=Michroma&family=Quicksand:wght@300..700&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -69,7 +70,8 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background text-foreground ;
+    font-family: "Quicksand", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   }
 
   /* Smooth scrolling for better UX */
@@ -99,14 +101,14 @@ All colors MUST be HSL.
 @layer components {
   /* Custom component styles */
   .hero-text {
-    @apply font-serif text-5xl md:text-7xl font-bold text-text-elegant leading-tight;
+    @apply text-5xl md:text-7xl font-bold text-text-elegant leading-tight;
   }
 
   .section-title {
-    @apply font-serif text-4xl md:text-5xl font-bold text-text-elegant;
+    @apply text-4xl md:text-5xl font-bold text-text-elegant;
   }
 
   .elegant-button {
-    @apply bg-transparent border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-all duration-300 px-8 py-4 text-lg font-sans uppercase tracking-widest;
+    @apply bg-transparent border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-all duration-300 px-8 py-4 text-lg uppercase tracking-widest;
   }
 }
