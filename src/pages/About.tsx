@@ -16,7 +16,7 @@ const About = () => {
               </h1>
               <div className="w-24 h-1 bg-gradient-accent"></div>
               <p className="font-sans text-xl text-text-muted leading-relaxed">
-                I'm Elena Voss, a professional photographer with over a decade of experience 
+                I'm Cinemalyy, a professional photographer with over a decade of experience 
                 capturing the beauty and complexity of human emotions through portraiture and fine art photography.
               </p>
             </div>
@@ -25,7 +25,7 @@ const About = () => {
               <div className="aspect-[3/4] overflow-hidden rounded-lg shadow-elegant">
                 <img
                   src={aboutPortrait}
-                  alt="Elena Voss Portrait"
+                  alt="Cinemalyy Portrait"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
@@ -40,7 +40,7 @@ const About = () => {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl font-bold text-text-elegant mb-6">
-              My Journey
+              My Journey as a Photographer
             </h2>
             <div className="w-16 h-1 bg-gradient-accent mx-auto mb-8"></div>
           </div>
@@ -48,7 +48,7 @@ const About = () => {
           <div className="grid md:grid-cols-2 gap-12">
             <div className="space-y-6">
               <h3 className="font-serif text-2xl font-bold text-text-elegant">
-                Artistic Vision
+                Artistic Vision as a Photographer
               </h3>
               <p className="font-sans text-text-muted leading-relaxed">
                 My approach to photography is rooted in the belief that every person has a unique story to tell. 
@@ -63,7 +63,7 @@ const About = () => {
             
             <div className="space-y-6">
               <h3 className="font-serif text-2xl font-bold text-text-elegant">
-                Professional Excellence
+                Professional Excellence as a Photographer
               </h3>
               <p className="font-sans text-text-muted leading-relaxed">
                 With certifications from the Professional Photographers of America and features in publications 
@@ -83,22 +83,22 @@ const About = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl font-bold text-text-elegant mb-6">
-              Specializations
+              Specializations as a Photographer
             </h2>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                title: "Portrait Photography",
+                title: "Portrait Photography as a Photographer",
                 description: "Capturing the essence of personality through professional headshots and artistic portraits"
               },
               {
-                title: "Fine Art Photography",
+                title: "Fine Art Photography as a Photographer",
                 description: "Creating timeless pieces that blend technical mastery with artistic vision"
               },
               {
-                title: "Commercial Work",
+                title: "Commercial Work as a Photographer",
                 description: "Professional photography services for brands, events, and editorial projects"
               }
             ].map((skill, index) => (

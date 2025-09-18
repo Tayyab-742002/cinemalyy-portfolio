@@ -42,7 +42,7 @@ const Contact = () => {
                     </label>
                     <Input 
                       className="bg-input border-border text-text-elegant placeholder:text-muted-foreground  focus:ring-accent"
-                      placeholder="John"
+                      placeholder="Johny"
                     />
                   </div>
                   <div>
@@ -51,7 +51,7 @@ const Contact = () => {
                     </label>
                     <Input 
                       className="bg-input border-border text-text-elegant placeholder:text-muted-foreground  focus:ring-accent"
-                      placeholder="Doe"
+                      placeholder="Depp"
                     />
                   </div>
                 </div>
@@ -119,7 +119,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="font-sans text-sm uppercase tracking-widest text-text-muted">Email</p>
-                    <p className="font-sans text-text-elegant">elena@elenavoss.com</p>
+                    <p className="font-sans text-text-elegant">contact@cinemalyy.com</p>
                   </div>
                 </div>
                 
